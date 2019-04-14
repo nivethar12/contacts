@@ -1,0 +1,18 @@
+<div>
+  Contact
+</div>
+<div>
+    <a (click)="editContacts()" class="done-link">Edit</a>
+ 
+</div>
+
+<div class="profileImg"><img class="contactImg"  src="{{currentContact.contactImage}}"> </div>     
+<div>{{currentContact.contactName}}</div>
+
+<div></div>
+<div class="outer">
+<div class="no">Mobile <span>{{currentContact.mobile}}</span></div> 
+<div class="id">Email <span>{{currentContact.email}}</span></div>  
+</div>
+<button (click)="deleteContact()">delete</button>
+

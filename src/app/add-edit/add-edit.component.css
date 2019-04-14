@@ -1,0 +1,16 @@
+.inputBlock {
+  display: flex;
+  margin-top: 12px;
+}
+
+.label {
+  width: 100px;
+}
+.ip {
+}
+.cncl-link{
+   
+}
+.done-link{
+    margin-left: 180px;
+}
