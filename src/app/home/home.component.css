@@ -1,0 +1,25 @@
+.contactImg {
+    height: 75px;
+    width: 75px;
+  }
+  .outer{
+    display: flex;
+  }
+  .profileImg{
+    flex: 1;
+  }
+  .name{    
+    flex: 1;
+  }
+  .fav{
+    flex:1;
+  }
+  .highlight{
+		background-color: #2994dd;
+  }
+  .addBtn{
+      margin-left: 354px;
+  }
+  .names{
+    margin-left: 386px;
+  }

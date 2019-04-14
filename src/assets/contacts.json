@@ -1,0 +1,27 @@
+[
+    {
+        "contactImage": "assets/images/man.png",
+		"contactName": "David McCoy",
+        "favourite":"true",
+        "id":1
+    },
+	{
+        "contactImage": "assets/images/boy.png",
+		"contactName": "Alenjandro Tran",
+        "favourite":"true",
+        "id":2
+    },
+	{
+        "contactImage": "assets/images/girl.png",
+		"contactName": "Fransico Fowler",
+        "favourite":"true",
+        "id":3
+    },
+	{
+        "contactImage": "assets/images/girl (1).png",
+		"contactName": "Luke haynes",
+        "favourite":"true",
+        "id":4
+    }
+    
+]
