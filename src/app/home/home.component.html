@@ -2,11 +2,21 @@
   home works!
 </p>
 <div>
-  <div><span>Groups</span><span class="names">Contact</span><span class="addBtn"><a routerLink="/add">+</a></span></div>
-  <div class="outer" (click)="onSelect(contact)" (mouseover)="displayDetails(i)" [ngClass]="{'highlight':i==clickedIndex}" *ngFor="let contact of contacts;index as i;">
-      <div class="profileImg"><img class="contactImg"  src="{{contact.contactImage}}"> </div>
-      <div class="name">{{contact.contactName}}</div>
-      <div class="fav"  >{{contact.favourite}}</div>
-    
+  <div>
+    <span>Groups</span><span class="names">Contact</span
+    ><span class="addBtn"><a routerLink="/add">+</a></span>
+  </div>
+  <div
+    class="outer"
+    (click)="onSelect(contact)"
+    (mouseover)="displayDetails(i)"
+    [ngClass]="{ highlight: i == clickedIndex }"
+    *ngFor="let contact of contacts; index as i"
+  >
+    <div class="profileImg">
+      <img class="contactImg" src="{{ contact.contactImage }}" />
+    </div>
+    <div class="name">{{ contact.contactName }}</div>
+    <div class="fav">{{ contact.favourite }}</div>
   </div>
 </div>
