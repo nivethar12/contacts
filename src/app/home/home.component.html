@@ -1,10 +1,8 @@
-<p>
-  home works!
-</p>
-<div>
-  <div>
-    <span>Groups</span><span class="names">Contact</span
-    ><span class="addBtn"><a routerLink="/add">+</a></span>
+<div class="container">
+  <div class="heading">
+    <span class="grp">Groups</span>
+    <span class="names">Contact</span>
+    <span class="addBtn"><a routerLink="/add" class="plus">+</a></span>
   </div>
   <div
     class="outer"
@@ -17,6 +15,8 @@
       <img class="contactImg" src="{{ contact.contactImage }}" />
     </div>
     <div class="name">{{ contact.contactName }}</div>
-    <div class="fav">{{ contact.favourite }}</div>
+    <div *ngIf="contact.favourite" class="fav">
+      {{ contact.favourite }}
+    </div>
   </div>
 </div>

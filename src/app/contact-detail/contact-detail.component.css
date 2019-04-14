@@ -1,13 +1,96 @@
+.container {
+  max-width: 350px;
+  margin: auto;
+  background-color: #f9f9f9;
+}
 .contactImg {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  border: 2px solid white;
 }
-.outer{
-    
+.profileImg {
+  text-align: center;
 }
-.no{
-
+.outer {
 }
-.id{
- 
+.no {
+  padding: 20px;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}
+.id {
+  padding: 20px;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}
+.upperBlock {
+  background-color: #dcf7f2;
+  padding: 25px;
+}
+.nameTxt {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 8px;
+}
+.contactLink {
+}
+.editLink {
+  margin-left: 242px;
+  color: #60dfc4;
+  font-size: bold;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: sans-serif;
+  margin-top: 11px;
+}
+.txt {
+  color: #60dfc4 !important;
+  font-size: bold;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: sans-serif;
+  margin-top: 11px;
+}
+.link {
+  text-decoration: none;
+  color: #60dfc4;
+}
+.links {
+  display: flex;
+}
+.arrowContact {
+  display: flex;
+}
+.iconImg {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #60dfc4;
+  border-radius: 50%;
+}
+.favImg {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.icons {
+  display: flex;
+  margin-top: 24px;
+}
+.icon {
+  flex: 1;
+}
+.field {
+  margin-left: 33px;
+}
+.deleteLink {
+  text-decoration: none;
+  color: red;
+}
+.linkField {
+  padding: 21px;
 }
