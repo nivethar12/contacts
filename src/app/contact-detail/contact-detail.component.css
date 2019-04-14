@@ -94,3 +94,7 @@
 .linkField {
   padding: 21px;
 }
+.done-link {
+  text-decoration: none;
+  color: #60dfc4;
+}
