@@ -1,18 +1,54 @@
-<div>
-  Contact
-</div>
-<div>
-    <a (click)="editContacts()" class="done-link">Edit</a>
- 
-</div>
+<div class="container">
+  <div class="links">
+    <div class="arrowContact">
+      <div class="contactLink">
+        <a routerLink=""> <img src="assets/images/arrow.png" /> </a>
+      </div>
+      <div class="txt"><a routerLink="" class="link"> Contact </a></div>
+    </div>
+    <div class="editLink">
+      <a href="javascript:void(0);" (click)="editContacts()" class="done-link"
+        >Edit</a
+      >
+    </div>
+  </div>
+  <div class="upperBlock">
+    <div class="profileImg">
+      <img class="contactImg" src="{{ currentContact.contactImage }}" />
+    </div>
 
-<div class="profileImg"><img class="contactImg"  src="{{currentContact.contactImage}}"> </div>     
-<div>{{currentContact.contactName}}</div>
+    <div class="nameTxt">{{ currentContact.contactName }}</div>
 
-<div></div>
-<div class="outer">
-<div class="no">Mobile <span>{{currentContact.mobile}}</span></div> 
-<div class="id">Email <span>{{currentContact.email}}</span></div>  
+    <div class="icons">
+      <div class="icon">
+        <img class="iconImg" src="assets/images/call4.png" />
+      </div>
+
+      <div class="icon">
+        <img class="iconImg" src="assets/images/msg1.png" />
+      </div>
+
+      <div class="icon">
+        <img class="iconImg" src="assets/images/email2.png" />
+      </div>
+
+      <div class="icon">
+        <img class="favImg" src="assets/images/fav.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <div class="no">
+      Mobile <span class="field">{{ currentContact.mobile }}</span>
+    </div>
+    <div class="id">
+      Email <span class="field">{{ currentContact.email }}</span>
+    </div>
+  </div>
+  <div class="linkField">
+    <a href="javascript:void(0);" (click)="deleteContact()" class="deleteLink"
+      >Delete</a
+    >
+  </div>
 </div>
-<button (click)="deleteContact()">delete</button>
-
