@@ -17,8 +17,8 @@ export class ContactDetailsService {
     private httpCall: Http
   ) {}
 
-  private hostName = 'http://localhost:3000';
-  //private hostName = 'https://curious-heron.glitch.me';
+  //private hostName = 'http://localhost:3000';
+  private hostName = 'https://contractapp-api.glitch.me/';
 
   getContacts(): Observable<any> {
     return this.httpCall
