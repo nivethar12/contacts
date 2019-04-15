@@ -1,16 +1,17 @@
 <div class="container">
   <div class="links">
     <div class="arrowContact">
-      <div class="contactLink">
-        <a routerLink=""> <img src="assets/images/arrow.png" /> </a>
+      <div class="txt">
+        <a routerLink="" class="link">
+          <img
+            style="height: 18px;vertical-align: bottom;"
+            src="/assets/images/leftarrow.svg"
+          />
+          Contact
+        </a>
       </div>
-      <div class="txt"><a routerLink="" class="link"> Contact </a></div>
     </div>
-    <div class="editLink">
-      <a href="javascript:void(0);" (click)="editContacts()" class="done-link"
-        >Edit</a
-      >
-    </div>
+    <a routerLink="/edit/{{ currentContact.id }}" class="editLink">Edit</a>
   </div>
   <div class="upperBlock">
     <div class="profileImg">
@@ -21,19 +22,30 @@
 
     <div class="icons">
       <div class="icon">
-        <img class="iconImg" src="assets/images/call4.png" />
+        <img class="icon-img" src="/assets/images/phone.svg" />
       </div>
 
       <div class="icon">
-        <img class="iconImg" src="assets/images/msg1.png" />
+        <img class="icon-img" src="assets/images/sms.svg" />
       </div>
 
       <div class="icon">
-        <img class="iconImg" src="assets/images/email2.png" />
+        <img class="icon-img" src="assets/images/email.svg" />
       </div>
 
       <div class="icon">
-        <img class="favImg" src="assets/images/fav.jpg" />
+        <img
+          *ngIf="currentContact.favourite"
+          (click)="removeFromFav()"
+          class="fav-img"
+          src="assets/images/favseleced.svg"
+        />
+        <img
+          *ngIf="!currentContact.favourite"
+          (click)="addToFav()"
+          class="fav-img"
+          src="assets/images/favnone2.svg"
+        />
       </div>
     </div>
   </div>
@@ -47,8 +59,8 @@
     </div>
   </div>
   <div class="linkField">
-    <a href="javascript:void(0);" (click)="deleteContact()" class="deleteLink"
-      >Delete</a
-    >
+    <a href="javascript:void(0);" (click)="deleteContact()" class="deleteLink">
+      Delete
+    </a>
   </div>
 </div>

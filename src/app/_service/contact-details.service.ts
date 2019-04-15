@@ -17,36 +17,69 @@ export class ContactDetailsService {
     private httpCall: Http
   ) {}
 
-  // private readContactsUrl="./assets/contacts.json";
-  private readContactsUrl = 'http://localhost:3000/contacts';
-  // private readDetailsUrl="./assets/contactsDetail.json";
-  private readDetailsUrl = 'http://localhost:3000/contactsDetails';
+  private hostName = 'http://localhost:3000';
+  //private hostName = 'https://curious-heron.glitch.me';
 
   getContacts(): Observable<any> {
-    return this.httpCall.get(this.readContactsUrl).map((response: Response) => {
-      return response.json();
-    });
+    return this.httpCall
+      .get(this.hostName + '/contacts')
+      .map((response: Response) => {
+        return response.json();
+      });
   }
   getContactDetails(id): Observable<any> {
     return this.httpCall
-      .get(`http://localhost:3000/contactsDetails?id=` + id)
+      .get(this.hostName + '/contactsDetails?id=' + id)
       .map((response: Response) => {
         return response.json();
       });
   }
   addorEdit(reqObj): Observable<any> {
-    let url = 'http://localhost:3000/addoredit';
-    console.log('reqObj' + JSON.stringify(reqObj));
-
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
-
     const options = new RequestOptions({ headers: headers });
-
     return this.httpCall
-      .post(url, JSON.stringify(reqObj), options)
+      .post(this.hostName + '/addorEdit', JSON.stringify(reqObj), options)
       .map((response: Response) => {
-        console.log('response.json()', response.json());
+        return response.json();
+      })
+      .catch((error: any) =>
+        Observable.throw(error.json().error || 'Server error')
+      );
+  }
+  addFav(reqObj): Observable<any> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    const options = new RequestOptions({ headers: headers });
+    return this.httpCall
+      .post(this.hostName + '/addfav', JSON.stringify(reqObj), options)
+      .map((response: Response) => {
+        return response.json();
+      })
+      .catch((error: any) =>
+        Observable.throw(error.json().error || 'Server error')
+      );
+  }
+  removeFav(reqObj): Observable<any> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    const options = new RequestOptions({ headers: headers });
+    return this.httpCall
+      .post(this.hostName + '/removefav', JSON.stringify(reqObj), options)
+      .map((response: Response) => {
+        return response.json();
+      })
+      .catch((error: any) =>
+        Observable.throw(error.json().error || 'Server error')
+      );
+  }
+  delete(reqObj): Observable<any> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    const options = new RequestOptions({ headers: headers });
+    return this.httpCall
+      .post(this.hostName + '/delete', JSON.stringify(reqObj), options)
+      .map((response: Response) => {
         return response.json();
       })
       .catch((error: any) =>

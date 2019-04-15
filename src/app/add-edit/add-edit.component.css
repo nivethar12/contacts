@@ -38,25 +38,24 @@
   line-height: 20px;
   outline: none;
   background: transparent;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .top-links {
   display: flex;
+  background: #009688;
 }
 
 .link {
   flex: 1;
   text-decoration: none;
   color: #60dfc4;
-  padding: 20px 10px;
+  padding: 15px 10px;
+  cursor: pointer;
 }
 
 .align-right {
   text-align: right;
-}
-
-.cncl-link {
-}
-.done-link {
-  margin-left: 180px;
+  color: #ffffff;
 }

@@ -1,8 +1,3 @@
-.container {
-  max-width: 350px;
-  margin: auto;
-  background-color: #f9f9f9;
-}
 .contactImg {
   height: 150px;
   width: 150px;
@@ -39,43 +34,43 @@
 .contactLink {
 }
 .editLink {
-  margin-left: 242px;
-  color: #60dfc4;
+  flex: 1;
   font-size: bold;
   font-weight: bold;
   font-size: 14px;
-  font-family: sans-serif;
-  margin-top: 11px;
+  text-align: right;
+  text-decoration: none;
+  color: #ffffff;
 }
 .txt {
   color: #60dfc4 !important;
-  font-size: bold;
-  font-weight: bold;
   font-size: 14px;
-  font-family: sans-serif;
-  margin-top: 11px;
 }
 .link {
   text-decoration: none;
   color: #60dfc4;
 }
 .links {
+  padding: 20px 10px;
   display: flex;
+  background: #009688;
 }
 .arrowContact {
   display: flex;
+  flex: 1;
 }
-.iconImg {
-  height: 40px;
-  width: 40px;
-  border: 1px solid #60dfc4;
-  border-radius: 50%;
+.icon-img {
+  height: 30px;
+  border-radius: 15px;
+  background: #57debe;
+  padding: 15px;
 }
-.favImg {
-  height: 40px;
-  width: 40px;
-  border: 1px solid white;
-  border-radius: 50%;
+.fav-img {
+  height: 30px;
+  border-radius: 15px;
+  background: #ffffff;
+  padding: 15px;
+  cursor: pointer;
 }
 .icons {
   display: flex;
@@ -92,9 +87,7 @@
   color: red;
 }
 .linkField {
-  padding: 21px;
-}
-.done-link {
-  text-decoration: none;
-  color: #60dfc4;
+  padding: 20px;
+  background: #ffffff;
+  text-align: center;
 }
