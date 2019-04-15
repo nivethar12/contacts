@@ -1,6 +1,26 @@
-.heading {
-  padding: 10px;
+.top-menu {
+  padding: 20px 10px;
+  display: flex;
+  background: #009688;
 }
+.top-menu .group {
+  flex: 1;
+  color: #60dfc4;
+  font-size: 14px;
+}
+.top-menu .contact-list {
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+  color: #60dfc4;
+}
+.top-menu .add-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .contactImg {
   height: 50px;
   width: 50px;
@@ -8,7 +28,7 @@
 }
 .outer {
   display: flex;
-  padding: 4px 8px;
+  padding: 4px 10px;
   background: #fff;
   border-bottom: 1px solid #f1f1f1;
   cursor: pointer;
@@ -19,7 +39,10 @@
 .name {
   flex: 1;
   line-height: 50px;
-  font-size: 13px;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .fav {
   width: 30px;
@@ -31,22 +54,10 @@
 .highlight {
   background-color: #f3f3f3;
 }
-.addBtn {
-  margin-left: 110px;
-}
+
 .plus {
   color: #60dfc4;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 14px;
   font-weight: 600;
-}
-.names {
-  margin-left: 92px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.grp {
-  color: #60dfc4;
-  font-size: 14px;
-  font-weight: bold;
 }
