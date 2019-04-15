@@ -1,13 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Lato, Helvetica, sans-serif;
-}
-
-.container {
-  max-width: 350px;
-  margin: auto;
-  background-color: #fbfbfb;
-  height: 100vh;
-}

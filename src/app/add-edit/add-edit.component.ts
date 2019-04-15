@@ -19,8 +19,6 @@ export class AddEditComponent implements OnInit {
   editContact: any = '';
   firstName: any = '';
   lastName: any = '';
-  mobile: any = '';
-  email: any = '';
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -30,22 +28,21 @@ export class AddEditComponent implements OnInit {
     if (this.contactId) {
       this.myService.getContactDetails(this.contactId).subscribe(data => {
         this.details = data;
-        //console.log(JSON.stringify(this.details, null, 2));
+        console.log(JSON.stringify(this.details, null, 2));
         this.editContact = this.details;
         this.firstName = this.editContact.contactName.split(' ')[0];
         this.lastName = this.editContact.contactName.split(' ')[1];
-        this.mobile = this.editContact.mobile;
-        this.email = this.editContact.email;
       });
     }
   }
   submit() {
     const obj = {
       contactName: this.firstName + ' ' + this.lastName,
-      mobile: this.mobile,
-      email: this.email,
-      id: this.contactId,
+      mobile: this.editContact.mobile,
+      email: this.editContact.email,
+      id: this.editContact.id,
     };
+
     this.myService.addorEdit(obj).subscribe(
       Response => {
         console.log('response', Response);
