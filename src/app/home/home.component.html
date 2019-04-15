@@ -2,7 +2,7 @@
   <div class="heading">
     <span class="grp">Groups</span>
     <span class="names">Contact</span>
-    <span class="addBtn"><a routerLink="/add" class="plus">+</a></span>
+    <span class="addBtn"><a routerLink="/add" class="plus">+ Add New</a></span>
   </div>
   <div
     class="outer"
@@ -15,8 +15,12 @@
       <img class="contactImg" src="{{ contact.contactImage }}" />
     </div>
     <div class="name">{{ contact.contactName }}</div>
-    <div *ngIf="contact.favourite" class="fav">
-      {{ contact.favourite }}
+    <div class="fav">
+      <img
+        class="fav-img"
+        *ngIf="contact.favourite"
+        src="assets/images/favseleced.svg"
+      />
     </div>
   </div>
 </div>
