@@ -1,9 +1,3 @@
-.container {
-  max-width: 350px;
-  margin: auto;
-  background-color: #f9f9f9;
-  margin-top: 45px;
-}
 .heading {
   padding: 10px;
 }
@@ -14,21 +8,28 @@
 }
 .outer {
   display: flex;
-  padding: 8px;
+  padding: 4px 8px;
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
 }
 .profileImg {
-  flex: 1;
+  width: 60px;
 }
 .name {
   flex: 1;
-  line-height: 3;
+  line-height: 50px;
+  font-size: 13px;
 }
 .fav {
-  flex: 1;
-  line-height: 3;
+  width: 30px;
+}
+.fav .fav-img {
+  width: 20px;
+  margin: 11px 0px;
 }
 .highlight {
-  background-color: #dad9d9;
+  background-color: #f3f3f3;
 }
 .addBtn {
   margin-left: 110px;
@@ -41,14 +42,11 @@
 }
 .names {
   margin-left: 92px;
-  font-weight: 700;
   font-size: 14px;
-  font-family: sans-serif;
+  font-weight: bold;
 }
 .grp {
   color: #60dfc4;
-  font-size: bold;
-  font-weight: bold;
   font-size: 14px;
-  font-family: sans-serif;
+  font-weight: bold;
 }
